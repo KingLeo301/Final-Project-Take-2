@@ -27,6 +27,7 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+  font-weight: 600;
 }
 
 button {
@@ -48,6 +49,8 @@ button {
 
 .header {
   padding-top: 24px;
+  position: relative;
+  padding: 24px 0;
 }
 
 .header__email {
@@ -77,13 +80,13 @@ button {
 
 .logo {
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
   color: #243e63;
 }
 
 .logo--image {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
 }
 
 .logo--wrapper {
@@ -95,7 +98,7 @@ button {
 .nav--links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
   font-size: 14px;
   font-weight: 700;
 }
@@ -103,7 +106,7 @@ button {
 .btn {
   background: #6415ff;
   color: white;
-  padding: 14px 32px;
+  padding: 12px 24px;
   border-radius: 999px;
   border: none;
   font-weight: 700;
@@ -139,6 +142,50 @@ button {
   background: transparent;
   border: 1px solid rgba(255,255,255,0.6);
   color: white;
+}
+
+/* Burger Button hidden on desktop */
+.menu--button {
+  display: none;
+  font-size: 32px;
+  color: #243e63;
+}
+
+/* Mobile menu hidden by default*/
+.mobile--menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 24px;
+  right: 24px;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 32px 24px;
+  z-index: 100;
+}
+
+.menu--menu.open {
+  display: block;
+}
+
+.menu--close {
+  display: block;
+  margin-left: auto;
+  font-size: 28px;
+  color: #243e63;
+  margin-bottom: 24px;
+}
+
+.mobile--nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.mobile--nav .btn {
+ margin-top: 8px;
 }
 
 .menu--row,
@@ -555,10 +602,15 @@ h2 span {
   .nav--links {
     gap: 16px;
     font-size: 13px;
+    display: none;
   }
 
   .menu--text h1 {
     font-size: 44px;
+  }
+
+  .menu--button {
+    display: block;
   }
 
   .center--text h2,

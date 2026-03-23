@@ -18,7 +18,26 @@
           Treact
         </div>
       </div>
+      <!-- Desktop Nav -->
       <nav class="nav--links">
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#login">Login</a>
+        <a href="#" class="btn btn--small">Sign Up</a>
+      </nav>
+      <!-- Burger Button -->
+       <button class="menu--button" id="menu__open__btn" aria-label="Open Menu">
+        ☰
+       </button>
+    </div>
+    <!-- Mobile Nav -->
+    <div class="mobile--menu" id="mobile__menu">
+      <button class="menu__close" id="menu__close__btn" aria-label="Close Menu">
+        ✕
+      </button>
+      <nav class="mobile--nav--links">
         <a href="#about">About</a>
         <a href="#blog">Blog</a>
         <a href="#pricing">Pricing</a>
@@ -369,5 +388,16 @@
       <p>© 2018 Treact Inc. All Rights Reserved.</p>
     </div>
   </footer>
+  <script>
+    const openBtn = document.getElementById("menu__open__btn");
+    const closeBtn = document.getElementById("menu__close__btn");
+    const mobileMenu = document.getElementById("mobile--menu");
+    openBtn.addEventListener("click", function () {
+      mobileMenu.classList.add("open");
+    });
+    closeBtn.addEventListener("click", function () {
+      mobileMenu.classList.remove("open");
+    });
+  </script>
 </body>
 </html>
