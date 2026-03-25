@@ -314,12 +314,14 @@ h2 span {
 }
 
 .feature--card h3 {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 8px;
 }
 
 .feature--card p {
   color: #7c8ba1;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
 .icon--circle {
@@ -362,8 +364,9 @@ h2 span {
 
 .values--row {
   display: flex;
-  gap: 24px;
-  margin-top: 32px;
+  flex-direction: column;
+  gap: 32px;
+  margin: 32px 0;
 }
 
 .value-box {
@@ -377,6 +380,57 @@ h2 span {
 
 .value--box p {
   color: #7c8ba1;
+}
+
+.value__title--row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.value--icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value--icon--green {
+  background-color: #91e6b4;
+  color: #22543d;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+}
+
+.value--icon--orange {
+  background-color: #feb2b2;
+  color: #742a2a;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+.value--icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.25;
+}
+
+.value h3 {
+  font-size: 28px;
+  color: #243e63;
+}
+
+.value p {
+  color: #7c8ba1;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 .pricing--section {
@@ -667,7 +721,16 @@ h2 span {
     max-width: 100%;
   }
 
-  .features--grid,
+  .features--grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .feature--card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
   .pricing--grid,
   .footer--grid {
     grid-template-columns: 1fr;
@@ -675,8 +738,63 @@ h2 span {
 
   .center--text h2,
   .split--text h2 {
-    font-size: 32px;
+    font-size: 40px;
+    line-height: 1.25;
   }
+
+  .steps--section .split {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .steps--section .split--text {
+    width: 100%;
+  }
+
+  .steps--section .split--text h2 {
+    margin-bottom: 24px;
+  }
+
+  .split--text {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .steps--section .split--image {
+    width: 100%;
+  }
+
+  .steps--section .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .steps--section .step h3 {
+    margin-bottom: 8px;
+  }
+
+  .steps--section .step--number {
+    min-width: auto;
+  }
+
+  .split {
+    flex-direction: column-reverse;
+  }
+
+  .center--text h2 {
+    max-width: 600px;
+    margin: 0 auto 16px;
+  }
+
+  .center--text .section--copy {
+    margin: 0 auto;
+    max-width: 620px;
+}
 
   .menu--text h1 {
     font-size: 36px;
