@@ -448,17 +448,30 @@ h2 span {
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  padding: 0 0 40px;
   overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.price--card:first-child .btn--light {
+  background: linear-gradient(90deg, #38b2ac, #81e6d9);
+  color: white;
+}
+
+.price--card:last-child .btn--light {
+  background: linear-gradient(90deg, #f56565, #fca5a5);
+  color: white;
 }
 
 .price--top--line {
   height: 8px;
-  background: linear-gradient(90deg, #38b2ac, #81e6d9);
+  width: 100%;
+  background: linear-gradient(90deg, #4fd1c5, #81e6d9);
 }
 
 .price--top--line.orange {
-  background: linear-gradient(90deg, #f6ad55, #fbd38d);
+  background: linear-gradient(90deg, #f56565, #fca5a5);
 }
 
 .price--card.featured {
@@ -466,10 +479,15 @@ h2 span {
   color: white;
 }
 
+.price--card.featured .btn--white {
+  background: white;
+  color: #6415ff;
+}
+
 .price--card h3,
 .price,
 .muted,
-.price-title,
+.price--title,
 .price--card ul,
 .price--card .btn {
   margin-left: 32px;
@@ -483,16 +501,17 @@ h2 span {
 }
 
 .price {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 900;
   margin-top: 16px;
 }
 
 .muted {
-  color: #7c8ba1;
+  color: #a0aec0;
   font-weight: 700;
   margin-top: 6px;
   margin-bottom: 24px;
+  letter-spacing: 1px;
 }
 
 .price--card.featured .muted {
@@ -511,11 +530,13 @@ h2 span {
 
 .price--title {
   font-weight: 700;
+  font-size: 22px;
   margin-bottom: 20px;
 }
 
 .price--card ul {
   list-style: none;
+  margin-bottom: 28px;
 }
 
 .price--card li {
@@ -528,7 +549,11 @@ h2 span {
 }
 
 .price--card .btn {
-  margin-top: 28px;
+  margin-top: auto;
+  margin-bottom: 32px;
+  align-self: center;
+  min-width: 190px;
+  padding: 16px 28px;
 }
 
 .testimonial--card {
@@ -601,7 +626,7 @@ h2 span {
   padding-top: 40px;
 }
 
-.cta-box {
+.cta--box {
   background: #6415ff;
   color: white;
   border-radius: 24px;
@@ -654,7 +679,13 @@ h2 span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
+  gap: 4px;
+}
+
+.footer--brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer--bottom .logo {
@@ -665,6 +696,17 @@ h2 span {
   .features--grid,
   .pricing--grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features--grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing--grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .nav--links {
@@ -734,6 +776,20 @@ h2 span {
   .pricing--grid,
   .footer--grid {
     grid-template-columns: 1fr;
+  }
+
+  .pricing--section .center--text h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .pricing--grid {
+    gap: 24px;
+    max-width: 100%;
+  }
+
+  .price {
+    font-size: 48px;
   }
 
   .center--text h2,
@@ -808,6 +864,9 @@ h2 span {
   .cta--actions {
     flex-direction: column;
     width: 100%;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
   }
 
   .cta--actions .btn {
@@ -816,5 +875,15 @@ h2 span {
 
   .cta--box {
     padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
   }
+
+  .cta--box h2 {
+    max-width: 600px;
+  }
+
 }
