@@ -679,17 +679,38 @@ h2 span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4px;
+  gap: 24px;
 }
 
 .footer--brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 .footer--bottom .logo {
   color: white;
+}
+
+.footer--socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer--social {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  color: #243e63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -742,6 +763,13 @@ h2 span {
     flex-direction: column;
   }
 
+  .footer--bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
   .nav--links {
     flex-wrap: wrap;
     justify-content: center;
@@ -773,8 +801,7 @@ h2 span {
     margin: 0 auto;
   }
 
-  .pricing--grid,
-  .footer--grid {
+  .pricing--grid {
     grid-template-columns: 1fr;
   }
 
