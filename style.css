@@ -247,6 +247,7 @@ h2 span {
 
 .trusted {
   margin-top: 48px;
+  opacity: 50%;
 }
 
 .trusted--box,
@@ -629,12 +630,14 @@ h2 span {
 .cta--box {
   background: #6415ff;
   color: white;
-  border-radius: 24px;
-  padding: 64px;
+  border-radius: 16px;
+  padding: 48px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 32px;
+  margin: 0px auto;
+  max-width: 1100px;
 }
 
 .cta--box h2 {
@@ -657,7 +660,8 @@ h2 span {
 
 .footer--grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  overflow: auto;
   gap: 32px;
   padding-bottom: 56px;
   border-bottom: 1px solid rgba(255,255,255,0.2);
@@ -717,6 +721,25 @@ h2 span {
   .features--grid,
   .pricing--grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu--row {
+  flex-direction: column;
+  text-align: center;
+  }
+
+  .menu--text--para {
+  display: flex;
+  justify-content: center;
+  }
+
+  .menu--text--para p {
+  max-width: 520px;
+  text-align: center;
+  }
+
+  .header__email {
+    margin: 0 auto;
   }
 
   .features--grid {
@@ -779,7 +802,7 @@ h2 span {
   .split--text,
   .menu--image,
   .split--image {
-    width: 100%;
+    width: 70%;
   }
 
   .menu--text {
@@ -845,6 +868,10 @@ h2 span {
     max-width: 600px;
   }
 
+  .testimonial--bottom {
+    justify-content: center;
+  }
+
   .steps--section .split--image {
     width: 100%;
   }
@@ -907,6 +934,9 @@ h2 span {
     align-items: center;
     text-align: center;
     gap: 24px;
+    margin: 0 16px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .cta--box h2 {
